@@ -14,7 +14,7 @@ import path from "node:path"
 import { fileURLToPath } from "node:url"
 import {
   CAPS, IMDB_ID_RE, admitNew, buildNewEntry, buildQueue, classifyFindResult, isExpired,
-  mergeExisting, parseIssueTitleId, selectCandidate, shouldStopOnHttpStatus,
+  mergeExisting, parseIssueTitleId, priorityIds, selectCandidate, shouldStopOnHttpStatus,
 } from "./lib.mjs"
 
 const TORRENTIO = "https://torrentio.strem.fun"
@@ -129,8 +129,8 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
       if (id && !known.has(id) && !state.expired[id] && !state.waiting[id]) discoveryIds.push(id)
     }
   }
-  const queue = buildQueue({ issueIds, waitingIds, discoveryIds, known, checked: state.checked, skip: state.skip })
-  log(`queue: ${queue.length} (issues ${issueIds.length}, waiting ${waitingIds.length}, discovery ${discoveryIds.length})`)
+  const queue = buildQueue({ issueIds, waitingIds, priorityIds: priorityIds(specs, provenance, now), discoveryIds, known, checked: state.checked, skip: state.skip })
+  log(`queue: ${queue.length} (issues ${issueIds.length}, waiting ${waitingIds.length}, discovery ${discoveryIds.length}, via ${[...new Set(queue.map((q) => q.via))].join("/")})`)
 
   // 3. Process serially.
   const issueDone = (id, outcome) => { for (const number of issueById.get(id) ?? []) results.push({ number, id, outcome }) }
@@ -182,7 +182,7 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
       }
     } else if (admitNew(candidate)) {
       specs[id] = buildNewEntry(candidate)
-      provenance[id] = prov({ created: true })
+      provenance[id] = prov({ created: true, addedAt: nowIso })
       delete state.waiting[id]
       issueDone(id, "added")
     } else {

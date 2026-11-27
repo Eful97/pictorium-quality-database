@@ -16,9 +16,9 @@ Pictorium downloads this file every 24 h and falls back to its bundled copy when
 
 ## Weekly update
 
-A GitHub Action (`weekly-update.yml`, Mondays 03:17 UTC) keeps the file fresh with low volume and additive rules:
+A GitHub Action (`weekly-update.yml`, Mondays and Thursdays 03:17 UTC) keeps the file fresh with low volume and additive rules:
 
-- **Sources per run (caps):** open `title-request` issues (30), the watch list (40), recent popular movies from TMDB (30) and the 20 oldest-checked known titles.
+- **Sources per run (caps):** open `title-request` issues (30), the watch list (40), priority rechecks (40: bot-added titles still below 4K or added in the last 12 weeks), recent popular movies from TMDB (30) and the 60 oldest-checked known titles, so every title is looked at again roughly every 12 weeks.
 - **Torrentio** is queried serially, one request per 1.1 s, for the *declared* stream labels. 401/403/429 stops the run and keeps the progress made so far.
 - **Movies only**, confirmed by a TMDB `/find` check.
 - **New titles** enter only with a 4K release, or a 1080p release declaring Dolby Vision, HDR10+ or Atmos. Others wait on a watch list for 8 weeks, then are dropped (a new issue lifts that).

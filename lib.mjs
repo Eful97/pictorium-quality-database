@@ -12,7 +12,8 @@ export const FORMAT_ORDER = ["dv", "hdr", "hdr10plus", "atmos"]
 export const ALLOWED_MERGE_FORMATS = ["dv", "hdr", "hdr10plus", "atmos"]
 export const KNOWN_QUALITIES = ["4K", "FHD", "HD", "SD"]
 export const WAITING_TTL_DAYS = 56
-export const CAPS = { issues: 30, waiting: 40, discovery: 30, refresh: 20 }
+export const RECENT_WEEKS = 12
+export const CAPS = { issues: 30, waiting: 40, priority: 40, discovery: 30, refresh: 60 }
 export const IMDB_ID_RE = /^tt\d{7,10}$/
 const STOP_STATUSES = new Set([401, 403, 429])
 
@@ -193,10 +194,31 @@ export function isExpired(entry, now) {
 }
 
 /**
- * Ordered, deduplicated work list. Issues first, then waiting, discovery,
- * and a refresh slice of the oldest-checked known ids. Per-source caps.
+ * Bot-created entries worth rechecking every run: still below 4K, or added
+ * within the last RECENT_WEEKS (new releases keep gaining formats).
  */
-export function buildQueue({ issueIds, waitingIds, discoveryIds, known, checked, skip, caps = CAPS }) {
+export function priorityIds(specs, provenance, now) {
+  const ids = []
+  for (const [id, p] of Object.entries(provenance)) {
+    if (p?.created !== true || !specs[id]) continue
+    const added = Date.parse(p.addedAt ?? p.observedAt)
+    const recent = Number.isFinite(added) && now - added < RECENT_WEEKS * 7 * 86400000
+    if (specs[id].quality !== "4K" || recent) ids.push(id)
+  }
+  return ids
+}
+
+const byOldestChecked = (checked) => (a, b) => {
+  const ca = checked[a] ?? ""
+  const cb = checked[b] ?? ""
+  return ca < cb ? -1 : ca > cb ? 1 : a < b ? -1 : 1
+}
+
+/**
+ * Ordered, deduplicated work list: issues, waiting, priority rechecks,
+ * discovery, then a refresh slice of the oldest-checked known ids.
+ */
+export function buildQueue({ issueIds, waitingIds, priorityIds: priority = [], discoveryIds, known, checked, skip, caps = CAPS }) {
   const queue = []
   const taken = new Set()
   const push = (ids, via, cap, filter) => {
@@ -211,12 +233,8 @@ export function buildQueue({ issueIds, waitingIds, discoveryIds, known, checked,
   }
   push(issueIds, "issue", caps.issues)
   push(waitingIds, "waiting", caps.waiting)
+  push([...priority].sort(byOldestChecked(checked)), "priority", caps.priority)
   push(discoveryIds, "discovery", caps.discovery, (id) => !known.has(id))
-  const refresh = [...known].sort((a, b) => {
-    const ca = checked[a] ?? ""
-    const cb = checked[b] ?? ""
-    return ca < cb ? -1 : ca > cb ? 1 : a < b ? -1 : 1
-  })
-  push(refresh, "refresh", caps.refresh)
+  push([...known].sort(byOldestChecked(checked)), "refresh", caps.refresh)
   return queue
 }

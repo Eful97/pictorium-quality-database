@@ -5,7 +5,7 @@ name: Weekly update
 # interpolated into a shell step.
 on:
   schedule:
-    - cron: "17 3 * * 1"
+    - cron: "17 3 * * 1,4"
   workflow_dispatch:
     inputs:
       dry_run:

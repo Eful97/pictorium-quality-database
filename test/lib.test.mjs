@@ -2,7 +2,7 @@ import test from "node:test"
 import assert from "node:assert/strict"
 import {
   admitNew, buildNewEntry, buildQueue, classifyFindResult, isExpired, mergeExisting,
-  parseIssueTitleId, selectCandidate, shouldStopOnHttpStatus,
+  parseIssueTitleId, priorityIds, selectCandidate, shouldStopOnHttpStatus,
 } from "../lib.mjs"
 
 const stream = (title) => ({ title })
@@ -95,4 +95,26 @@ test("buildQueue: caps per source, dedupe, skip, refresh oldest first", () => {
   assert.deepEqual(q.map((x) => `${x.via}:${x.id}`), [
     "issue:tt1000001", "waiting:tt2000001", "discovery:tt3000001", "refresh:tt0000003", "refresh:tt0000002",
   ])
+})
+
+test("priorityIds: bot entries below 4K or added within 12 weeks; curated never", () => {
+  const now = Date.parse("2026-12-01T00:00:00Z")
+  const specs = { tt0000001: { quality: "FHD" }, tt0000002: { quality: "4K" }, tt0000003: { quality: "4K" }, tt0000004: { quality: "FHD" } }
+  const prov = {
+    tt0000001: { created: true, addedAt: "2026-01-01T00:00:00Z" },
+    tt0000002: { created: true, addedAt: "2026-11-20T00:00:00Z" },
+    tt0000003: { created: true, addedAt: "2026-01-01T00:00:00Z" },
+    tt0000004: { source: "torrentio" },
+  }
+  assert.deepEqual(priorityIds(specs, prov, now).sort(), ["tt0000001", "tt0000002"])
+})
+
+test("buildQueue: priority ids come before discovery, oldest-checked first, capped", () => {
+  const q = buildQueue({
+    issueIds: [], waitingIds: [], priorityIds: ["tt0000003", "tt0000001", "tt0000002"],
+    discoveryIds: ["tt3000001"], known: new Set(["tt0000001", "tt0000002", "tt0000003"]),
+    checked: { tt0000001: "2026-11-20", tt0000002: "2026-11-10" }, skip: {},
+    caps: { issues: 1, waiting: 1, priority: 2, discovery: 1, refresh: 5 },
+  })
+  assert.deepEqual(q.map((x) => `${x.via}:${x.id}`), ["priority:tt0000003", "priority:tt0000002", "discovery:tt3000001", "refresh:tt0000001"])
 })
