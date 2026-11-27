@@ -22,7 +22,7 @@ A GitHub Action (`weekly-update.yml`, Mondays and Thursdays 03:17 UTC) keeps the
 - **Torrentio** is queried serially, one request per 1.1 s, for the *declared* stream labels. 401/403/429 stops the run and keeps the progress made so far.
 - **Movies only**, confirmed by a TMDB `/find` check.
 - **New titles** enter only with a 4K release, or a 1080p release declaring Dolby Vision, HDR10+ or Atmos. Others wait on a watch list for 8 weeks, then are dropped (a new issue lifts that).
-- **Existing titles** only gain formats. Curated entries never change quality; entries the bot created may move up in quality, never down. IMAX is never added from Torrentio.
+- **Existing titles** (curated or not) are overwritten by what Torrentio declares: formats are replaced by the union of formats declared by 1080p+ releases, quality moves up but is never lowered by one observation, IMAX is kept, and a title with no usable observation is left alone. The previous value is stored in `provenance.json` (`previous`) and in git history.
 - `provenance.json` records source `torrentio`, `declared`, and the date; `state.json` holds the watch list and check dates.
 - Issues get a fixed-template answer and are closed after the data commit lands. Issue text is read only for an IMDb id and never echoed or executed.
 

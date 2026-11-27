@@ -1,7 +1,7 @@
 import test from "node:test"
 import assert from "node:assert/strict"
 import {
-  admitNew, buildNewEntry, buildQueue, classifyFindResult, isExpired, mergeExisting,
+  admitNew, buildNewEntry, buildQueue, classifyFindResult, isExpired, observeTitle, overwriteEntry,
   parseIssueTitleId, priorityIds, selectCandidate, shouldStopOnHttpStatus,
 } from "../lib.mjs"
 
@@ -35,24 +35,6 @@ test("admitNew: 4K, or FHD with a declared format; never CAM/HD", () => {
 
 test("buildNewEntry drops imax and orders formats", () => {
   assert.deepEqual(buildNewEntry({ quality: "4K", formats: ["atmos", "imax", "dv", "hdr"] }), { quality: "4K", formats: ["dv", "hdr", "atmos"] })
-})
-
-test("mergeExisting: curated keeps quality, formats only grow, imax never", () => {
-  const r = mergeExisting({ quality: "FHD", formats: ["dv"] }, { quality: "4K", formats: ["dv", "hdr10plus", "imax"] }, false)
-  assert.equal(r.entry.quality, "FHD")
-  assert.deepEqual(r.entry.formats, ["dv", "hdr10plus"])
-  assert.deepEqual(r.added, ["hdr10plus"])
-  assert.equal(r.qualityChanged, false)
-})
-
-test("mergeExisting: machine entry may upgrade quality, never downgrade", () => {
-  assert.equal(mergeExisting({ quality: "FHD", formats: ["dv"] }, { quality: "4K", formats: [] }, true).entry.quality, "4K")
-  assert.equal(mergeExisting({ quality: "4K", formats: ["dv"] }, { quality: "FHD", formats: [] }, true).entry.quality, "4K")
-})
-
-test("mergeExisting: fills absent quality even on curated; unchanged reports changed=false", () => {
-  assert.equal(mergeExisting({ formats: ["dv"] }, { quality: "4K", formats: [] }, false).entry.quality, "4K")
-  assert.equal(mergeExisting({ quality: "4K", formats: ["dv"] }, { quality: "4K", formats: ["dv"] }, false).changed, false)
 })
 
 test("parseIssueTitleId reads only the form field section", () => {
@@ -117,4 +99,28 @@ test("buildQueue: priority ids come before discovery, oldest-checked first, capp
     caps: { issues: 1, waiting: 1, priority: 2, discovery: 1, refresh: 5 },
   })
   assert.deepEqual(q.map((x) => `${x.via}:${x.id}`), ["priority:tt0000003", "priority:tt0000002", "discovery:tt3000001", "refresh:tt0000001"])
+})
+
+test("observeTitle: best quality, union of formats from 1080p+ releases, ignores CAM labels", () => {
+  const o = observeTitle([{ title: "A 2160p DV" }, { title: "B 1080p HDR10+" }, { title: "C CAM HDR Atmos" }, { title: "D 720p Atmos" }])
+  assert.equal(o.quality, "4K")
+  assert.deepEqual(o.formats, ["dv", "hdr10plus"])
+  assert.equal(observeTitle([]), null)
+  assert.equal(observeTitle([{ title: "no labels" }]), null)
+})
+
+test("overwriteEntry: replaces formats (curated included), keeps imax, quality only goes up", () => {
+  const r = overwriteEntry({ quality: "4K", formats: ["dv", "imax", "hdr"] }, { quality: "FHD", formats: ["hdr10plus"] })
+  assert.deepEqual(r.entry.formats, ["imax", "hdr10plus"])
+  assert.equal(r.entry.quality, "4K")
+  assert.equal(r.changed, true)
+  assert.deepEqual(r.previous, { quality: "4K", formats: ["dv", "imax", "hdr"] })
+  assert.equal(overwriteEntry({ quality: "FHD", formats: ["dv"] }, { quality: "4K", formats: ["dv"] }).entry.quality, "4K")
+})
+
+test("overwriteEntry: same set keeps stored order and reports no change; no observation changes nothing", () => {
+  const same = overwriteEntry({ quality: "4K", formats: ["dv", "atmos", "hdr10plus", "hdr"] }, { quality: "4K", formats: ["hdr", "hdr10plus", "atmos", "dv"] })
+  assert.equal(same.changed, false)
+  assert.deepEqual(same.entry.formats, ["dv", "atmos", "hdr10plus", "hdr"])
+  assert.equal(overwriteEntry({ quality: "4K", formats: ["dv"] }, null).changed, false)
 })

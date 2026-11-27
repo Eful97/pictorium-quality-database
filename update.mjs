@@ -14,7 +14,7 @@ import path from "node:path"
 import { fileURLToPath } from "node:url"
 import {
   CAPS, IMDB_ID_RE, admitNew, buildNewEntry, buildQueue, classifyFindResult, isExpired,
-  mergeExisting, parseIssueTitleId, priorityIds, selectCandidate, shouldStopOnHttpStatus,
+  observeTitle, overwriteEntry, parseIssueTitleId, priorityIds, selectCandidate, shouldStopOnHttpStatus,
 } from "./lib.mjs"
 
 const TORRENTIO = "https://torrentio.strem.fun"
@@ -172,10 +172,10 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
     const prov = (extra) => ({ source: "torrentio", verification: "declared", observedAt: nowIso, via, ...extra })
 
     if (specs[id]) {
-      const merged = mergeExisting(specs[id], candidate, provenance[id]?.created === true)
+      const merged = overwriteEntry(specs[id], observeTitle(streams))
       if (merged.changed) {
         specs[id] = merged.entry
-        provenance[id] = { ...provenance[id], ...prov({}) }
+        provenance[id] = { ...provenance[id], ...prov({ previous: merged.previous }) }
         issueDone(id, "updated")
       } else {
         issueDone(id, "present")

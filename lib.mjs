@@ -145,31 +145,43 @@ export function buildNewEntry(candidate) {
 }
 
 /**
- * Merge a candidate into an EXISTING entry. Formats are additive only. Quality
- * is never touched on curated entries; on bot-created entries it may only
- * move up. `machine` = the bot created the entry.
+ * Title-level observation: best quality seen and the union of allowlisted
+ * formats declared by releases at 1080p or better (declared labels, edition
+ * union: not "all in one stream"). null when no stream carried a quality.
  */
-export function mergeExisting(existing, candidate, machine) {
+export function observeTitle(streams) {
+  if (!Array.isArray(streams)) return null
+  let quality = null
+  const formats = new Set()
+  for (const s of streams) {
+    const p = parseTorrentioRecord(s)
+    if (!p.quality) continue
+    if (quality === null || QUALITY_ORDER[p.quality] > QUALITY_ORDER[quality]) quality = p.quality
+    if (QUALITY_ORDER[p.quality] >= QUALITY_ORDER.FHD) for (const f of p.formats) formats.add(f)
+  }
+  return quality ? { quality, formats: orderedFormats([...formats]) } : null
+}
+
+/**
+ * Overwrite an existing entry with a fresh observation (curated or not):
+ * formats are REPLACED by the observed set, quality moves up but is never
+ * lowered by a single observation, imax is kept (Torrentio never reports it).
+ * No observation (no quality seen) changes nothing. Entries whose formats
+ * already match keep their stored order.
+ */
+export function overwriteEntry(existing, obs) {
   const base = isRecord(existing) ? existing : {}
-  const have = new Set(Array.isArray(base.formats) ? base.formats.filter((f) => typeof f === "string") : [])
-  const added = []
-  for (const f of orderedFormats(candidate?.formats ?? [])) {
-    if (!have.has(f)) { added.push(f); have.add(f) }
-  }
-  const entry = { ...base, formats: [...have] }
-  let qualityChanged = false
-  const cq = candidate?.quality
-  if (KNOWN_QUALITIES.includes(cq)) {
-    const cur = base.quality
-    if (cur === undefined || cur === null) {
-      entry.quality = cq
-      qualityChanged = true
-    } else if (machine && QUALITY_ORDER[cq] > (QUALITY_ORDER[cur] ?? -1)) {
-      entry.quality = cq
-      qualityChanged = true
-    }
-  }
-  return { entry, added, qualityChanged, changed: added.length > 0 || qualityChanged }
+  const current = Array.isArray(base.formats) ? base.formats.filter((f) => typeof f === "string") : []
+  if (!obs) return { entry: base, changed: false }
+  const wanted = new Set(obs.formats)
+  if (current.includes("imax")) wanted.add("imax")
+  const kept = current.filter((f) => wanted.has(f))
+  const formats = [...kept, ...FORMAT_ORDER.concat("imax").filter((f) => wanted.has(f) && !kept.includes(f))]
+  const entry = { ...base, formats }
+  const cur = base.quality
+  if (cur === undefined || cur === null || QUALITY_ORDER[obs.quality] > (QUALITY_ORDER[cur] ?? -1)) entry.quality = obs.quality
+  const changed = entry.quality !== base.quality || formats.length !== current.length || formats.some((f, i) => f !== current[i])
+  return { entry, changed, previous: { quality: base.quality ?? null, formats: current } }
 }
 
 // ---- issues -----------------------------------------------------------------

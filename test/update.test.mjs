@@ -62,7 +62,7 @@ test("discovered 4K title is added with provenance; no-4K title waits", async ()
   assert.ok(read(dir, "state.json").waiting.tt5000002.firstSeen)
 })
 
-test("issue flow: results for added, present, not-movie, invalid; curated quality untouched", async () => {
+test("issue flow: results for added, present, not-movie, invalid; curated entry is overwritten", async () => {
   const dir = setup({ tt0000009: { quality: "4K", formats: [] }, tt0000008: { quality: "FHD", formats: ["dv"] } })
   const issues = [
     { number: 1, body: "### IMDb id or link\n\ntt5000001" },
@@ -80,8 +80,9 @@ test("issue flow: results for added, present, not-movie, invalid; curated qualit
   const results = Object.fromEntries(read(dir, "issue-results.json").map((r) => [r.number, r.outcome]))
   assert.deepEqual(results, { 1: "added", 2: "present", 3: "not-movie", 4: "invalid", 5: "updated" })
   const specs = read(dir, "av-specs.json")
-  assert.equal(specs.tt0000008.quality, "FHD")
-  assert.deepEqual(specs.tt0000008.formats, ["dv", "hdr10plus"])
+  assert.equal(specs.tt0000008.quality, "4K")
+  assert.deepEqual(specs.tt0000008.formats, ["hdr10plus"])
+  assert.deepEqual(read(dir, "provenance.json").tt0000008.previous, { quality: "FHD", formats: ["dv"] })
   assert.equal(read(dir, "state.json").skip.tt5000003, "series")
 })
 
