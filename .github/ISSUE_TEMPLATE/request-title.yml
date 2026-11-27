@@ -1,0 +1,17 @@
+name: Request a title
+description: Ask for a movie's 4K / HDR / Dolby Vision / Atmos badges to be added or refreshed
+title: "Title request"
+labels: ["title-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Movies only. The weekly run checks your title and answers here, then closes the issue.
+        A title with no 4K or HDR release yet stays on a watch list for 8 weeks.
+  - type: input
+    id: imdb
+    attributes:
+      label: IMDb id or link
+      description: "For example tt15239678 or https://www.imdb.com/title/tt15239678/"
+    validations:
+      required: true

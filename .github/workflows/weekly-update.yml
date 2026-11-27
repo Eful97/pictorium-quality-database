@@ -1,0 +1,63 @@
+name: Weekly update
+
+# Only schedule and manual runs: issue events never trigger privileged code.
+# Issue text is read by update.mjs as data (regex for an IMDb id) and is never
+# interpolated into a shell step.
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Do 3 real requests and write nothing (checks the runner is not blocked)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests
+        run: npm test
+      - name: Dry run
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node update.mjs --dry-run
+      - name: Update
+        if: ${{ github.event_name == 'schedule' || !inputs.dry_run }}
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node update.mjs
+      - name: Commit
+        if: ${{ github.event_name == 'schedule' || !inputs.dry_run }}
+        run: |
+          if git diff --quiet -- av-specs.json provenance.json state.json; then
+            echo "no data change"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add av-specs.json provenance.json state.json
+            git commit -m "chore: weekly A/V specs update"
+            git push
+          fi
+      - name: Answer issues
+        if: ${{ github.event_name == 'schedule' || !inputs.dry_run }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node post-issue-results.mjs
