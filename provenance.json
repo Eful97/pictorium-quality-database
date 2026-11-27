@@ -138,5 +138,31 @@
     "observedAt": "2026-11-27T07:49:38.833Z",
     "via": "discovery",
     "created": true
+  },
+  "tt38213251": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-27T07:58:31.992Z",
+    "via": "discovery",
+    "created": true,
+    "addedAt": "2026-11-27T07:58:31.992Z"
+  },
+  "tt0081534": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-27T07:58:31.992Z",
+    "via": "refresh"
+  },
+  "tt0082406": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-27T07:58:31.992Z",
+    "via": "refresh"
+  },
+  "tt0086197": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-27T07:58:31.992Z",
+    "via": "refresh"
   }
 }

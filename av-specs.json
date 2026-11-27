@@ -239,7 +239,8 @@
   "tt0081534": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr"
     ]
   },
   "tt0081554": {
@@ -278,7 +279,8 @@
   "tt0082406": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr10plus"
     ]
   },
   "tt0082783": {
@@ -526,7 +528,8 @@
   "tt0086197": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr"
     ]
   },
   "tt0086216": {
@@ -10544,6 +10547,13 @@
   "tt27419420": {
     "quality": "4K",
     "formats": [
+      "hdr"
+    ]
+  },
+  "tt38213251": {
+    "quality": "4K",
+    "formats": [
+      "dv",
       "hdr"
     ]
   }
