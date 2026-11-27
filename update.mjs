@@ -14,7 +14,7 @@ import path from "node:path"
 import { fileURLToPath } from "node:url"
 import {
   CAPS, IMDB_ID_RE, admitNew, buildNewEntry, buildQueue, classifyFindResult, isExpired,
-  observeTitle, overwriteEntry, parseIssueTitleId, priorityIds, selectCandidate, shouldStopOnHttpStatus,
+  minReleasesFor, observeTitle, overwriteEntry, parseIssueTitleId, priorityIds, releaseYear, selectCandidate, shouldStopOnHttpStatus, strictIds,
 } from "./lib.mjs"
 
 const TORRENTIO = "https://torrentio.strem.fun"
@@ -129,7 +129,7 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
       if (id && !known.has(id) && !state.expired[id] && !state.waiting[id]) discoveryIds.push(id)
     }
   }
-  const queue = buildQueue({ issueIds, waitingIds, priorityIds: priorityIds(specs, provenance, now), discoveryIds, known, checked: state.checked, skip: state.skip })
+  const queue = buildQueue({ issueIds, waitingIds, priorityIds: priorityIds(specs, provenance, now), strictIds: strictIds(specs, provenance), discoveryIds, known, checked: state.checked, skip: state.skip })
   log(`queue: ${queue.length} (issues ${issueIds.length}, waiting ${waitingIds.length}, discovery ${discoveryIds.length}, via ${[...new Set(queue.map((q) => q.via))].join("/")})`)
 
   // 3. Process serially.
@@ -141,9 +141,14 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
 
     // Authoritative TMDB gate: movies only.
     let kind = "unknown"
+    let year = null
     try {
       const res = await get(fetchImpl, `${TMDB}/find/${encodeURIComponent(id)}?external_source=imdb_id&api_key=${encodeURIComponent(key)}`)
-      if (res.ok) kind = classifyFindResult(await res.json())
+      if (res.ok) {
+        const found = await res.json()
+        kind = classifyFindResult(found)
+        year = releaseYear(found)
+      }
       else { log(`tmdb find ${id}: ${res.status}`); continue }
     } catch { continue }
     if (kind !== "movie") {
@@ -166,13 +171,19 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
     } catch { streams = null }
     if (!streams) continue // transient failure: leave issue open, retry next run
 
-    const candidate = selectCandidate(streams)
+    // Classic films (< 1990): a format must be declared by >= 2 releases.
+    const minReleases = minReleasesFor(year)
+    let candidate = selectCandidate(streams)
+    if (candidate && minReleases > 1) {
+      const confirmed = observeTitle(streams, minReleases)?.formats ?? []
+      candidate = { ...candidate, formats: candidate.formats.filter((f) => confirmed.includes(f)) }
+    }
     state.checked[id] = nowIso.slice(0, 10)
     dirty = true
     const prov = (extra) => ({ source: "torrentio", verification: "declared", observedAt: nowIso, via, ...extra })
 
     if (specs[id]) {
-      const merged = overwriteEntry(specs[id], observeTitle(streams))
+      const merged = overwriteEntry(specs[id], observeTitle(streams, minReleases))
       if (merged.changed) {
         specs[id] = merged.entry
         provenance[id] = { ...provenance[id], ...prov({ previous: merged.previous }) }
@@ -189,6 +200,8 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
       state.waiting[id] ??= { firstSeen: nowIso }
       issueDone(id, "waiting")
     }
+    // Movie gate passed and the strict rule applied: never queue this id as strict again.
+    if (specs[id]) provenance[id] = { ...provenance[id], strict: true }
   }
 
   if (dryRun) {
@@ -207,7 +220,11 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const dir = path.dirname(fileURLToPath(import.meta.url))
-  run({ dir, dryRun: process.argv.includes("--dry-run") }).catch((err) => {
+  run({ dir, dryRun: process.argv.includes("--dry-run") }).then((r) => {
+    // Lets the workflow fail loudly when Torrentio blocks the runner.
+    if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `stopped=${r?.stopped ?? ""}
+`)
+  }).catch((err) => {
     console.error(err instanceof Error ? err.message : err)
     process.exit(1)
   })

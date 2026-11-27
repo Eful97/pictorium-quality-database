@@ -13,7 +13,15 @@ export const ALLOWED_MERGE_FORMATS = ["dv", "hdr", "hdr10plus", "atmos"]
 export const KNOWN_QUALITIES = ["4K", "FHD", "HD", "SD"]
 export const WAITING_TTL_DAYS = 56
 export const RECENT_WEEKS = 12
-export const CAPS = { issues: 30, waiting: 40, priority: 40, discovery: 30, refresh: 60 }
+export const CAPS = { issues: 30, waiting: 40, priority: 40, strict: 80, discovery: 30, refresh: 60 }
+// Films released before this year are classic titles: dv/hdr/hdr10plus/atmos
+// labels there usually come from fan upscales, so a format needs several
+// concordant releases before it is stored.
+export const STRICT_BEFORE_YEAR = 1990
+export const STRICT_MIN_RELEASES = 2
+// IMDb ids below this are the old catalog: used only to pick which seed
+// entries get the strict recheck first (the real gate is the TMDB year).
+export const LEGACY_ID_LIMIT = 1000000
 export const IMDB_ID_RE = /^tt\d{7,10}$/
 const STOP_STATUSES = new Set([401, 403, 429])
 
@@ -117,6 +125,16 @@ export function classifyFindResult(json) {
   return "unknown"
 }
 
+/** Release year from a TMDB /find result (first movie hit), or null. */
+export function releaseYear(json) {
+  const d = json?.movie_results?.[0]?.release_date
+  const y = typeof d === "string" ? Number(d.slice(0, 4)) : NaN
+  return Number.isInteger(y) && y > 1800 ? y : null
+}
+
+/** Releases that must declare a format before it is stored (1 = no extra rule). */
+export const minReleasesFor = (year) => (year !== null && year !== undefined && year < STRICT_BEFORE_YEAR ? STRICT_MIN_RELEASES : 1)
+
 export function shouldStopOnHttpStatus(status, headers) {
   if (STOP_STATUSES.has(status)) return true
   try {
@@ -149,17 +167,18 @@ export function buildNewEntry(candidate) {
  * formats declared by releases at 1080p or better (declared labels, edition
  * union: not "all in one stream"). null when no stream carried a quality.
  */
-export function observeTitle(streams) {
+export function observeTitle(streams, minReleases = 1) {
   if (!Array.isArray(streams)) return null
   let quality = null
-  const formats = new Set()
+  const counts = new Map()
   for (const s of streams) {
     const p = parseTorrentioRecord(s)
     if (!p.quality) continue
     if (quality === null || QUALITY_ORDER[p.quality] > QUALITY_ORDER[quality]) quality = p.quality
-    if (QUALITY_ORDER[p.quality] >= QUALITY_ORDER.FHD) for (const f of p.formats) formats.add(f)
+    if (QUALITY_ORDER[p.quality] >= QUALITY_ORDER.FHD) for (const f of new Set(p.formats)) counts.set(f, (counts.get(f) ?? 0) + 1)
   }
-  return quality ? { quality, formats: orderedFormats([...formats]) } : null
+  const formats = [...counts].filter(([, n]) => n >= minReleases).map(([f]) => f)
+  return quality ? { quality, formats: orderedFormats(formats) } : null
 }
 
 /**
@@ -220,6 +239,19 @@ export function priorityIds(specs, provenance, now) {
   return ids
 }
 
+/**
+ * Seed entries from the old catalog that still carry a quality-sensitive
+ * format and were never rechecked under the strict rule (`provenance.strict`).
+ */
+export function strictIds(specs, provenance) {
+  const out = []
+  for (const [id, e] of Object.entries(specs)) {
+    if (!IMDB_ID_RE.test(id) || Number(id.slice(2)) >= LEGACY_ID_LIMIT || provenance[id]?.strict) continue
+    if (Array.isArray(e?.formats) && e.formats.some((f) => ALLOWED_MERGE_FORMATS.includes(f))) out.push(id)
+  }
+  return out
+}
+
 const byOldestChecked = (checked) => (a, b) => {
   const ca = checked[a] ?? ""
   const cb = checked[b] ?? ""
@@ -230,7 +262,7 @@ const byOldestChecked = (checked) => (a, b) => {
  * Ordered, deduplicated work list: issues, waiting, priority rechecks,
  * discovery, then a refresh slice of the oldest-checked known ids.
  */
-export function buildQueue({ issueIds, waitingIds, priorityIds: priority = [], discoveryIds, known, checked, skip, caps = CAPS }) {
+export function buildQueue({ issueIds, waitingIds, priorityIds: priority = [], strictIds: strict = [], discoveryIds, known, checked, skip, caps = CAPS }) {
   const queue = []
   const taken = new Set()
   const push = (ids, via, cap, filter) => {
@@ -246,6 +278,7 @@ export function buildQueue({ issueIds, waitingIds, priorityIds: priority = [], d
   push(issueIds, "issue", caps.issues)
   push(waitingIds, "waiting", caps.waiting)
   push([...priority].sort(byOldestChecked(checked)), "priority", caps.priority)
+  push([...strict].sort(byOldestChecked(checked)), "strict", caps.strict ?? 0)
   push(discoveryIds, "discovery", caps.discovery, (id) => !known.has(id))
   push([...known].sort(byOldestChecked(checked)), "refresh", caps.refresh)
   return queue

@@ -39,6 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: node update.mjs --dry-run
       - name: Update
+        id: update
         if: ${{ github.event_name == 'schedule' || !inputs.dry_run }}
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
@@ -61,3 +62,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node post-issue-results.mjs
+      # Progress is already committed above; this only raises the alarm (red run
+      # + GitHub failure email) when Torrentio stopped the run on 401/403/429.
+      - name: Fail when Torrentio blocked the run
+        if: ${{ steps.update.outputs.stopped != '' }}
+        env:
+          STOPPED: ${{ steps.update.outputs.stopped }}
+        run: |
+          echo "::error::Torrentio stopped the run with HTTP $STOPPED; remaining titles were not checked"
+          exit 1

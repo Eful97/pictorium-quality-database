@@ -17,7 +17,7 @@ function setup(specs, state = {}) {
 const read = (dir, n) => JSON.parse(fs.readFileSync(path.join(dir, n), "utf8"))
 
 /** Routes by URL. `streams[id]` = array | status number; `kind[id]` = movie|series. */
-function fakeFetch({ streams = {}, kind = {}, issues = [], discover = [], imdb = {}, log = [] } = {}) {
+function fakeFetch({ streams = {}, kind = {}, issues = [], discover = [], imdb = {}, year = {}, log = [] } = {}) {
   return async (url) => {
     log.push(url)
     const json = (b, status = 200) => new Response(JSON.stringify(b), { status })
@@ -27,7 +27,8 @@ function fakeFetch({ streams = {}, kind = {}, issues = [], discover = [], imdb =
     if ((m = url.match(/\/movie\/(\d+)\/external_ids/))) return json({ imdb_id: imdb[m[1]] ?? null })
     if ((m = url.match(/\/find\/(tt\d+)/))) {
       const k = kind[m[1]] ?? "movie"
-      return json({ movie_results: k === "movie" ? [{}] : [], tv_results: k === "series" ? [{}] : [] })
+      const rd = year[m[1]] ? { release_date: `${year[m[1]]}-06-01` } : {}
+      return json({ movie_results: k === "movie" ? [rd] : [], tv_results: k === "series" ? [{}] : [] })
     }
     if ((m = url.match(/\/stream\/movie\/(tt\d+)\.json/))) {
       const s = streams[m[1]] ?? []
@@ -119,3 +120,43 @@ test("expired waiting titles are dropped and not rediscovered", async () => {
   assert.equal(st.waiting.tt5000002, undefined)
   assert.ok(st.expired.tt5000002)
 })
+
+test("classic film (< 1990): single-release dv/atmos is dropped, 2 concordant releases are kept; strict mark set", async () => {
+  const dir = setup({
+    tt0021749: { quality: "4K", formats: ["dv", "hdr", "atmos"] },
+    tt0021750: { quality: "4K", formats: ["dv", "hdr"] },
+  })
+  const f = fakeFetch({
+    year: { tt0021749: 1931, tt0021750: 1932 },
+    streams: {
+      tt0021749: [{ title: "A 2160p DV HDR" }, { title: "B 2160p HDR" }, { title: "C 1080p Atmos" }],
+      tt0021750: [{ title: "A 2160p DV" }, { title: "B 2160p DV" }],
+    },
+  })
+  await run({ ...base, dir, fetchImpl: f })
+  const specs = read(dir, "av-specs.json")
+  assert.deepEqual(specs.tt0021749.formats, ["hdr"]) // hdr x2; dv and atmos x1
+  assert.deepEqual(specs.tt0021750.formats, ["dv"])
+  const prov = read(dir, "provenance.json")
+  assert.equal(prov.tt0021749.strict, true)
+  assert.deepEqual(prov.tt0021749.previous.formats, ["dv", "hdr", "atmos"])
+})
+
+test("modern film keeps the single-release rule and is marked strict-checked", async () => {
+  const dir = setup({ tt1000001: { quality: "4K", formats: [] }, tt0000004: { quality: "4K", formats: ["dv"] } })
+  const f = fakeFetch({ year: { tt1000001: 2021 }, streams: { tt1000001: [{ title: "A 2160p DV" }] } })
+  await run({ ...base, dir, fetchImpl: f })
+  assert.deepEqual(read(dir, "av-specs.json").tt1000001.formats, ["dv"])
+  assert.equal(read(dir, "provenance.json").tt1000001.strict, true)
+})
+
+test("new classic title is admitted without an unconfirmed format", async () => {
+  const dir = setup({})
+  const f = fakeFetch({
+    discover: [1], imdb: { 1: "tt5000009" }, year: { tt5000009: 1955 },
+    streams: { tt5000009: [{ title: "A 2160p DV" }] },
+  })
+  await run({ ...base, dir, fetchImpl: f })
+  assert.deepEqual(read(dir, "av-specs.json").tt5000009, { quality: "4K", formats: [] })
+})
+

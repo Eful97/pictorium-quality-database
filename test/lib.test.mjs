@@ -2,7 +2,7 @@ import test from "node:test"
 import assert from "node:assert/strict"
 import {
   admitNew, buildNewEntry, buildQueue, classifyFindResult, isExpired, observeTitle, overwriteEntry,
-  parseIssueTitleId, priorityIds, selectCandidate, shouldStopOnHttpStatus,
+  minReleasesFor, parseIssueTitleId, priorityIds, releaseYear, selectCandidate, shouldStopOnHttpStatus, strictIds,
 } from "../lib.mjs"
 
 const stream = (title) => ({ title })
@@ -124,3 +124,40 @@ test("overwriteEntry: same set keeps stored order and reports no change; no obse
   assert.deepEqual(same.entry.formats, ["dv", "atmos", "hdr10plus", "hdr"])
   assert.equal(overwriteEntry({ quality: "4K", formats: ["dv"] }, null).changed, false)
 })
+
+test("releaseYear / minReleasesFor: classic films need 2 releases, unknown year does not", () => {
+  assert.equal(releaseYear({ movie_results: [{ release_date: "1931-02-06" }] }), 1931)
+  assert.equal(releaseYear({ movie_results: [{}] }), null)
+  assert.equal(releaseYear(null), null)
+  assert.equal(minReleasesFor(1989), 2)
+  assert.equal(minReleasesFor(1990), 1)
+  assert.equal(minReleasesFor(null), 1)
+})
+
+test("observeTitle minReleases: a format needs N distinct 1080p+ releases", () => {
+  const streams = [{ title: "A 2160p DV HDR" }, { title: "B 2160p HDR" }, { title: "C 1080p Atmos" }, { title: "D 720p HDR" }]
+  assert.deepEqual(observeTitle(streams, 2).formats, ["hdr"])
+  assert.deepEqual(observeTitle(streams, 1).formats, ["dv", "hdr", "atmos"])
+  assert.equal(observeTitle(streams, 2).quality, "4K")
+})
+
+test("strictIds: old-catalog ids with a sensitive format that were not strict-checked", () => {
+  const specs = {
+    tt0021749: { quality: "4K", formats: ["dv"] },
+    tt0021750: { quality: "4K", formats: [] },
+    tt0021751: { quality: "4K", formats: ["imax"] },
+    tt0021752: { quality: "4K", formats: ["hdr"] },
+    tt5000001: { quality: "4K", formats: ["dv"] },
+  }
+  assert.deepEqual(strictIds(specs, { tt0021752: { strict: true } }), ["tt0021749"])
+})
+
+test("buildQueue: strict bucket sits after priority, before discovery, capped", () => {
+  const q = buildQueue({
+    issueIds: [], waitingIds: [], priorityIds: ["tt0000001"], strictIds: ["tt0000002", "tt0000003", "tt0000004"],
+    discoveryIds: ["tt3000001"], known: new Set(["tt0000001", "tt0000002", "tt0000003", "tt0000004"]), checked: {}, skip: {},
+    caps: { issues: 1, waiting: 1, priority: 1, strict: 2, discovery: 1, refresh: 0 },
+  })
+  assert.deepEqual(q.map((x) => `${x.via}:${x.id}`), ["priority:tt0000001", "strict:tt0000002", "strict:tt0000003", "discovery:tt3000001"])
+})
+
