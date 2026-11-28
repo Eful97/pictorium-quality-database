@@ -5523,5 +5523,1695 @@
       ]
     },
     "strict": true
+  },
+  "tt0445620": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0446029": {
+    "strict": true
+  },
+  "tt0448134": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0449059": {
+    "strict": true
+  },
+  "tt0449088": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0449467": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0450259": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0451279": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0452623": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0452625": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt0453562": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0454848": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0454876": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0454921": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0455565": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0457655": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0458339": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0460791": {
+    "strict": true
+  },
+  "tt0462322": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0464105": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0467406": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0468565": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0468569": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "imax",
+        "hdr",
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0469494": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0470752": {
+    "strict": true
+  },
+  "tt0471711": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0472043": {
+    "strict": true
+  },
+  "tt0473705": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0475276": {
+    "strict": true
+  },
+  "tt0477348": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0478970": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0479113": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0482571": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0488120": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0490204": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0490215": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt0498380": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0499549": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0756683": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0758758": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0765429": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0765443": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0770828": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0780504": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt0780536": {
+    "strict": true
+  },
+  "tt0790636": {
+    "strict": true
+  },
+  "tt0796366": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt0800369": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0814314": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0816442": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0816692": {
+    "strict": true
+  },
+  "tt0817177": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0824747": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0829482": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0830515": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0831387": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0839995": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0840361": {
+    "strict": true
+  },
+  "tt0848228": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0857191": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0870111": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0878804": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0880502": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0887912": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt0892769": {
+    "strict": true
+  },
+  "tt0892791": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt0898367": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0903624": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0910970": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt0918927": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0926084": {
+    "misses": {
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt0929632": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0942384": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0945571": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0947798": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0952682": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0964517": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0970179": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0974015": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0976051": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0988045": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0990404": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt0993846": {
+    "strict": true
+  },
+  "tt10095582": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt10098448": {
+    "strict": true
+  },
+  "tt1013753": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1014759": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1016150": {
+    "strict": true
+  },
+  "tt1020072": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1022603": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1024648": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10366206": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10366460": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "imax",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10374610": {
+    "strict": true
+  },
+  "tt10375624": {
+    "strict": true
+  },
+  "tt1045658": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1049413": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10515852": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt10516984": {
+    "misses": {
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt1051906": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10612922": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt10633456": {
+    "strict": true
+  },
+  "tt10638522": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10640346": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10648342": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "imax",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt1065073": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt10676052": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10687116": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos"
+      ]
+    },
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1070874": {
+    "strict": true
+  },
+  "tt10720352": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt1073510": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1074638": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "imax",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt1078188": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt10794054": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr10plus"
+      ]
+    },
+    "misses": {
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt1080016": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10838180": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10855768": {
+    "misses": {
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt10872600": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "imax",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt1091191": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt1095442": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt10954984": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "imax",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt10986222": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt1099212": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11079148": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt11083552": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11121664": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt11127680": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt11138512": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11160650": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt11161474": {
+    "misses": {
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt1119646": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11198810": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11233960": {
+    "strict": true
+  },
+  "tt1124052": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1125849": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt11271038": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "misses": {
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt11278476": {
+    "strict": true
+  },
+  "tt11286314": {
+    "strict": true
+  },
+  "tt11286640": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt11291274": {
+    "strict": true
+  },
+  "tt1130884": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt11315808": {
+    "strict": true
+  },
+  "tt11317142": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt1131748": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1132620": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1132623": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt11327514": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt1136608": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11378946": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11389748": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt11394282": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt1152850": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt11539996": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr10plus"
+      ]
+    },
+    "misses": {
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt11561116": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11563598": {
+    "strict": true
+  },
+  "tt1156398": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11564570": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt1160419": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "imax",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt11655566": {
+    "strict": true
+  },
+  "tt11657662": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt11685322": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt1170358": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt1172570": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt11729298": {
+    "strict": true
+  },
+  "tt11768948": {
+    "misses": {
+      "dv": 1,
+      "atmos": 1
+    },
+    "strict": true
+  },
+  "tt1179933": {
+    "strict": true
+  },
+  "tt1182345": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "atmos"
+      ]
+    },
+    "strict": true
+  },
+  "tt11847410": {
+    "strict": true
+  },
+  "tt11866324": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt1189340": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt1191111": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
+  },
+  "tt1193138": {
+    "strict": true
+  },
+  "tt1197624": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt1201607": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt12037194": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "imax",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt12042730": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:44:23.037Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt1205489": {
+    "misses": {
+      "dv": 1
+    },
+    "strict": true
   }
 }
