@@ -14,8 +14,7 @@ test("selectCandidate: highest tier, formats from one release", () => {
     stream("Movie 2160p HDR10+"),
   ])
   assert.equal(c.quality, "4K")
-  assert.deepEqual(c.formats, ["hdr10plus"].length ? c.formats : [])
-  assert.ok(c.formats.includes("dv") || c.formats.includes("hdr10plus"))
+  assert.deepEqual(c.formats, ["dv", "atmos"]) // the first 2160p release, not the union
 })
 
 test("selectCandidate: nothing usable -> null", () => {
@@ -109,13 +108,27 @@ test("observeTitle: best quality, union of formats from 1080p+ releases, ignores
   assert.equal(observeTitle([{ title: "no labels" }]), null)
 })
 
-test("overwriteEntry: replaces formats (curated included), keeps imax, quality only goes up", () => {
-  const r = overwriteEntry({ quality: "4K", formats: ["dv", "imax", "hdr"] }, { quality: "FHD", formats: ["hdr10plus"] })
-  assert.deepEqual(r.entry.formats, ["imax", "hdr10plus"])
-  assert.equal(r.entry.quality, "4K")
-  assert.equal(r.changed, true)
-  assert.deepEqual(r.previous, { quality: "4K", formats: ["dv", "imax", "hdr"] })
+test("overwriteEntry: adds new formats at once, drops a missing one only after 2 consecutive misses, keeps imax, quality only goes up", () => {
+  const start = { quality: "4K", formats: ["dv", "imax", "hdr"] }
+  const obs = { quality: "FHD", formats: ["hdr10plus"] }
+  const first = overwriteEntry(start, obs)
+  assert.deepEqual(first.entry.formats, ["dv", "imax", "hdr", "hdr10plus"])
+  assert.deepEqual(first.misses, { dv: 1, hdr: 1 })
+  const second = overwriteEntry(first.entry, obs, first.misses)
+  assert.deepEqual(second.entry.formats, ["imax", "hdr10plus"])
+  assert.deepEqual(second.misses, {})
+  assert.equal(second.entry.quality, "4K")
+  assert.equal(second.changed, true)
+  assert.deepEqual(second.previous, { quality: "4K", formats: ["dv", "imax", "hdr", "hdr10plus"] })
   assert.equal(overwriteEntry({ quality: "FHD", formats: ["dv"] }, { quality: "4K", formats: ["dv"] }).entry.quality, "4K")
+})
+
+test("overwriteEntry: a format seen again resets its miss counter", () => {
+  const e = { quality: "4K", formats: ["dv"] }
+  const r = overwriteEntry(e, { quality: "4K", formats: ["dv"] }, { dv: 1 })
+  assert.deepEqual(r.misses, {})
+  assert.equal(r.changed, false)
+  assert.deepEqual(overwriteEntry(e, { quality: "4K", formats: [] }).entry.formats, ["dv"])
 })
 
 test("overwriteEntry: same set keeps stored order and reports no change; no observation changes nothing", () => {

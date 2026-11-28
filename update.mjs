@@ -190,12 +190,17 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
     const prov = (extra) => ({ source: "torrentio", verification: "declared", observedAt: nowIso, via, ...extra })
 
     if (specs[id]) {
-      const merged = overwriteEntry(specs[id], observeTitle(streams, minReleases))
+      const merged = overwriteEntry(specs[id], observeTitle(streams, minReleases), provenance[id]?.misses)
+      const withMisses = (p) => {
+        const { misses: _, ...rest } = p ?? {}
+        return Object.keys(merged.misses).length ? { ...rest, misses: merged.misses } : rest
+      }
       if (merged.changed) {
         specs[id] = merged.entry
-        provenance[id] = { ...provenance[id], ...prov({ previous: merged.previous }) }
+        provenance[id] = withMisses({ ...provenance[id], ...prov({ previous: merged.previous }) })
         issueDone(id, "updated")
       } else {
+        if (JSON.stringify(merged.misses) !== JSON.stringify(provenance[id]?.misses ?? {})) provenance[id] = withMisses(provenance[id])
         issueDone(id, "present")
       }
     } else if (admitNew(candidate)) {

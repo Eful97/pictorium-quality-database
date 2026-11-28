@@ -19,6 +19,7 @@ export const CAPS = { issues: 30, waiting: 40, priority: 40, strict: 80, discove
 // concordant releases before it is stored.
 export const STRICT_BEFORE_YEAR = 1990
 export const STRICT_MIN_RELEASES = 2
+export const MISS_LIMIT = 2 // consecutive observations without a format before it is removed
 // IMDb ids below this are the old catalog: used only to pick which seed
 // entries get the strict recheck first (the real gate is the TMDB year).
 export const LEGACY_ID_LIMIT = 1000000
@@ -183,24 +184,32 @@ export function observeTitle(streams, minReleases = 1) {
 
 /**
  * Overwrite an existing entry with a fresh observation (curated or not):
- * formats are REPLACED by the observed set, quality moves up but is never
+ * observed formats are added, stored ones removed after MISS_LIMIT consecutive misses, quality moves up but is never
  * lowered by a single observation, imax is kept (Torrentio never reports it).
  * No observation (no quality seen) changes nothing. Entries whose formats
  * already match keep their stored order.
  */
-export function overwriteEntry(existing, obs) {
+export function overwriteEntry(existing, obs, misses = {}) {
   const base = isRecord(existing) ? existing : {}
   const current = Array.isArray(base.formats) ? base.formats.filter((f) => typeof f === "string") : []
-  if (!obs) return { entry: base, changed: false }
+  if (!obs) return { entry: base, changed: false, misses }
   const wanted = new Set(obs.formats)
   if (current.includes("imax")) wanted.add("imax")
-  const kept = current.filter((f) => wanted.has(f))
+  // A stored format is dropped only after MISS_LIMIT consecutive observations without it.
+  const nextMisses = {}
+  const kept = current.filter((f) => {
+    if (wanted.has(f)) return true
+    const n = (misses[f] ?? 0) + 1
+    if (n >= MISS_LIMIT) return false
+    nextMisses[f] = n
+    return true
+  })
   const formats = [...kept, ...FORMAT_ORDER.concat("imax").filter((f) => wanted.has(f) && !kept.includes(f))]
   const entry = { ...base, formats }
   const cur = base.quality
   if (cur === undefined || cur === null || QUALITY_ORDER[obs.quality] > (QUALITY_ORDER[cur] ?? -1)) entry.quality = obs.quality
   const changed = entry.quality !== base.quality || formats.length !== current.length || formats.some((f, i) => f !== current[i])
-  return { entry, changed, previous: { quality: base.quality ?? null, formats: current } }
+  return { entry, changed, previous: { quality: base.quality ?? null, formats: current }, misses: nextMisses }
 }
 
 // ---- issues -----------------------------------------------------------------

@@ -7,11 +7,11 @@ import { run } from "../update.mjs"
 
 const NOW = Date.parse("2026-12-01T00:00:00Z")
 
-function setup(specs, state = {}) {
+function setup(specs, state = {}, prov = {}) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "qdb-"))
   fs.writeFileSync(path.join(dir, "av-specs.json"), JSON.stringify(specs))
   fs.writeFileSync(path.join(dir, "state.json"), JSON.stringify({ waiting: {}, checked: {}, skip: {}, expired: {}, ...state }))
-  fs.writeFileSync(path.join(dir, "provenance.json"), "{}")
+  fs.writeFileSync(path.join(dir, "provenance.json"), JSON.stringify(prov))
   return dir
 }
 const read = (dir, n) => JSON.parse(fs.readFileSync(path.join(dir, n), "utf8"))
@@ -77,7 +77,7 @@ test("missing.json ids join discovery; known, waiting, expired and invalid ids a
 })
 
 test("issue flow: results for added, present, not-movie, invalid; curated entry is overwritten", async () => {
-  const dir = setup({ tt0000009: { quality: "4K", formats: [] }, tt0000008: { quality: "FHD", formats: ["dv"] } })
+  const dir = setup({ tt0000009: { quality: "4K", formats: [] }, tt0000008: { quality: "FHD", formats: ["dv"] } }, {}, { tt0000008: { misses: { dv: 1 } } })
   const issues = [
     { number: 1, body: "### IMDb id or link\n\ntt5000001" },
     { number: 2, body: "### IMDb id or link\n\ntt0000009" },
@@ -138,7 +138,7 @@ test("classic film (< 1990): single-release dv/atmos is dropped, 2 concordant re
   const dir = setup({
     tt0021749: { quality: "4K", formats: ["dv", "hdr", "atmos"] },
     tt0021750: { quality: "4K", formats: ["dv", "hdr"] },
-  })
+  }, {}, { tt0021749: { misses: { dv: 1, atmos: 1 } }, tt0021750: { misses: { hdr: 1 } } }) // second consecutive miss
   const f = fakeFetch({
     year: { tt0021749: 1931, tt0021750: 1932 },
     streams: {

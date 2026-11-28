@@ -22,7 +22,7 @@ Two GitHub Actions do the work. Both only use TMDB and Torrentio, and only look 
 
 - Titles come from open `title-request` issues, the watch list, recent popular movies (including the ones found by the missing check below) and the titles checked longest ago, so every title is looked at again about every 12 weeks.
 - A new title is added only with a 4K release, or a 1080p release with Dolby Vision, HDR10+ or Atmos. Otherwise it waits on a watch list for 8 weeks, then is dropped. A new issue for it lifts that.
-- An existing title is updated to what Torrentio declares. Quality never goes down because of one observation, and IMAX is kept.
+- An existing title is updated to what Torrentio declares. New formats are added at once; a stored format is removed only after 2 consecutive checks without it. Quality never goes down because of one observation, and IMAX is kept.
 - Films released before 1990 need 2 separate releases declaring a format before it is stored, because old films often get fake labels from fan upscales.
 - Requests go one at a time. If Torrentio blocks the run (401/403/429), progress is kept and the run ends red, so you get an email.
 
