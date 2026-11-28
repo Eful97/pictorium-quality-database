@@ -1,0 +1,37 @@
+name: Weekly missing-title check
+
+# Read-only: TMDB only (never Torrentio), writes no data files, only one issue.
+on:
+  schedule:
+    - cron: "0 6 * * 1" # every Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Compare database with TMDB
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: node check-missing.mjs missing-report.md
+      - name: Update the weekly issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: "Titoli mancanti o scaduti (controllo settimanale)"
+        run: |
+          gh label create missing-check --color FBCA04 --description "Weekly TMDB missing check" 2>/dev/null || true
+          n=$(gh issue list --label missing-check --state open --json number --jq '.[0].number')
+          if [ -n "$n" ]; then
+            gh issue edit "$n" --body-file missing-report.md
+          else
+            gh issue create --title "$TITLE" --label missing-check --body-file missing-report.md
+          fi

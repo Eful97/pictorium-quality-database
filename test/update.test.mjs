@@ -63,6 +63,19 @@ test("discovered 4K title is added with provenance; no-4K title waits", async ()
   assert.ok(read(dir, "state.json").waiting.tt5000002.firstSeen)
 })
 
+test("missing.json ids join discovery; known, waiting, expired and invalid ids are ignored", async () => {
+  const dir = setup(
+    { tt0000001: { quality: "4K", formats: [] } },
+    { checked: { tt0000001: "2026-11-30" }, waiting: { tt5000003: { firstSeen: "2026-11-30T00:00:00Z" } }, expired: { tt5000004: "2026-10-01" } },
+  )
+  fs.writeFileSync(path.join(dir, "missing.json"), JSON.stringify(["tt5000001", "tt0000001", "tt5000003", "tt5000004", "bad", 7]))
+  const f = fakeFetch({ streams: { tt5000001: [{ title: "Film 2160p DV" }], tt5000003: [], tt0000001: [] } })
+  await run({ ...base, dir, fetchImpl: f })
+  assert.deepEqual(read(dir, "av-specs.json").tt5000001, { quality: "4K", formats: ["dv"] })
+  assert.equal(read(dir, "provenance.json").tt5000001.via, "discovery")
+  assert.equal(read(dir, "av-specs.json").tt5000004, undefined)
+})
+
 test("issue flow: results for added, present, not-movie, invalid; curated entry is overwritten", async () => {
   const dir = setup({ tt0000009: { quality: "4K", formats: [] }, tt0000008: { quality: "FHD", formats: ["dv"] } })
   const issues = [

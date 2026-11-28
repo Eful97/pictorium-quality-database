@@ -13,7 +13,7 @@ export const ALLOWED_MERGE_FORMATS = ["dv", "hdr", "hdr10plus", "atmos"]
 export const KNOWN_QUALITIES = ["4K", "FHD", "HD", "SD"]
 export const WAITING_TTL_DAYS = 56
 export const RECENT_WEEKS = 12
-export const CAPS = { issues: 30, waiting: 40, priority: 40, strict: 80, discovery: 30, refresh: 60 }
+export const CAPS = { issues: 30, waiting: 40, priority: 40, strict: 80, discovery: 60, refresh: 100 }
 // Films released before this year are classic titles: dv/hdr/hdr10plus/atmos
 // labels there usually come from fan upscales, so a format needs several
 // concordant releases before it is stored.

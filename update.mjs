@@ -129,6 +129,13 @@ export async function run({ dir, env = process.env, fetchImpl = fetch, now = Dat
       if (id && !known.has(id) && !state.expired[id] && !state.waiting[id]) discoveryIds.push(id)
     }
   }
+  // Ids found by check-missing.mjs (ephemeral file, never committed); same filters as discovery.
+  if (!dryRun) {
+    const missing = readJson(file("missing.json"), [])
+    for (const id of Array.isArray(missing) ? missing : []) {
+      if (typeof id === "string" && IMDB_ID_RE.test(id) && !discoveryIds.includes(id) && !known.has(id) && !state.expired[id] && !state.waiting[id]) discoveryIds.push(id)
+    }
+  }
   const queue = buildQueue({ issueIds, waitingIds, priorityIds: priorityIds(specs, provenance, now), strictIds: strictIds(specs, provenance), discoveryIds, known, checked: state.checked, skip: state.skip })
   log(`queue: ${queue.length} (issues ${issueIds.length}, waiting ${waitingIds.length}, discovery ${discoveryIds.length}, via ${[...new Set(queue.map((q) => q.via))].join("/")})`)
 

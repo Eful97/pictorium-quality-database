@@ -38,6 +38,14 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
         run: node update.mjs --dry-run
+      # TMDB only; writes missing.json (git-ignored) that update.mjs reads as extra
+      # discovery ids. A failure here must not block the update.
+      - name: Find missing titles
+        if: ${{ github.event_name == 'schedule' || !inputs.dry_run }}
+        continue-on-error: true
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: node check-missing.mjs missing-report.md
       - name: Update
         id: update
         if: ${{ github.event_name == 'schedule' || !inputs.dry_run }}
