@@ -291,11 +291,17 @@
   "tt14413964": {
     "source": "torrentio",
     "verification": "declared",
-    "observedAt": "2026-11-28T12:57:23.457Z",
-    "via": "waiting",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "priority",
     "created": true,
     "addedAt": "2026-11-28T12:57:23.457Z",
-    "strict": true
+    "strict": true,
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "hdr"
+      ]
+    }
   },
   "tt0086423": {
     "source": "torrentio",
@@ -995,38 +1001,66 @@
   "tt37267166": {
     "source": "torrentio",
     "verification": "declared",
-    "observedAt": "2026-11-28T12:57:23.457Z",
-    "via": "discovery",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "priority",
     "created": true,
     "addedAt": "2026-11-28T12:57:23.457Z",
-    "strict": true
+    "strict": true,
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    }
   },
   "tt28498219": {
     "source": "torrentio",
     "verification": "declared",
-    "observedAt": "2026-11-28T12:57:23.457Z",
-    "via": "discovery",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "priority",
     "created": true,
     "addedAt": "2026-11-28T12:57:23.457Z",
-    "strict": true
+    "strict": true,
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "hdr10plus"
+      ]
+    }
   },
   "tt38515310": {
     "source": "torrentio",
     "verification": "declared",
-    "observedAt": "2026-11-28T12:57:23.457Z",
-    "via": "discovery",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "priority",
     "created": true,
     "addedAt": "2026-11-28T12:57:23.457Z",
-    "strict": true
+    "strict": true,
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "hdr"
+      ]
+    }
   },
   "tt38793125": {
     "source": "torrentio",
     "verification": "declared",
-    "observedAt": "2026-11-28T12:57:23.457Z",
-    "via": "discovery",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "priority",
     "created": true,
     "addedAt": "2026-11-28T12:57:23.457Z",
-    "strict": true
+    "strict": true,
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    }
   },
   "tt33318732": {
     "source": "torrentio",
@@ -1040,11 +1074,19 @@
   "tt32268691": {
     "source": "torrentio",
     "verification": "declared",
-    "observedAt": "2026-11-28T12:57:23.457Z",
-    "via": "discovery",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "priority",
     "created": true,
     "addedAt": "2026-11-28T12:57:23.457Z",
-    "strict": true
+    "strict": true,
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr",
+        "atmos"
+      ]
+    }
   },
   "tt27050858": {
     "source": "torrentio",
@@ -1058,11 +1100,18 @@
   "tt39631280": {
     "source": "torrentio",
     "verification": "declared",
-    "observedAt": "2026-11-28T12:57:23.457Z",
-    "via": "discovery",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "priority",
     "created": true,
     "addedAt": "2026-11-28T12:57:23.457Z",
-    "strict": true
+    "strict": true,
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    }
   },
   "tt50016818": {
     "source": "torrentio",
@@ -1076,11 +1125,17 @@
   "tt14129116": {
     "source": "torrentio",
     "verification": "declared",
-    "observedAt": "2026-11-28T12:57:23.457Z",
-    "via": "discovery",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "priority",
     "created": true,
     "addedAt": "2026-11-28T12:57:23.457Z",
-    "strict": true
+    "strict": true,
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "hdr"
+      ]
+    }
   },
   "tt0093409": {
     "strict": true
@@ -2157,6 +2212,1856 @@
     "strict": true
   },
   "tt0104691": {
+    "strict": true
+  },
+  "tt0104694": {
+    "strict": true
+  },
+  "tt0104797": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0104940": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0104952": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0105017": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0105046": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0105151": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0105236": {
+    "strict": true
+  },
+  "tt0105323": {
+    "strict": true
+  },
+  "tt0105695": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0106308": {
+    "strict": true
+  },
+  "tt0106364": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0106469": {
+    "strict": true
+  },
+  "tt0106489": {
+    "strict": true
+  },
+  "tt0106519": {
+    "strict": true
+  },
+  "tt0106677": {
+    "strict": true
+  },
+  "tt0106856": {
+    "strict": true
+  },
+  "tt0106977": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107007": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107048": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107282": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107290": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107507": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107554": {
+    "strict": true
+  },
+  "tt0107616": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107688": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107808": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0107818": {
+    "strict": true
+  },
+  "tt0108002": {
+    "strict": true
+  },
+  "tt0108037": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0108052": {
+    "strict": true
+  },
+  "tt0108065": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0108071": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0108122": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0108358": {
+    "strict": true
+  },
+  "tt0108399": {
+    "strict": true
+  },
+  "tt0108550": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0108551": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0109348": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0109445": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0109506": {
+    "strict": true
+  },
+  "tt0109642": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0109686": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0109707": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0109830": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0109842": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0110116": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0110148": {
+    "strict": true
+  },
+  "tt0110322": {
+    "strict": true
+  },
+  "tt0110357": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0110367": {
+    "strict": true
+  },
+  "tt0110413": {
+    "strict": true
+  },
+  "tt0110684": {
+    "strict": true
+  },
+  "tt0110912": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0110932": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0111161": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0111257": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0111503": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112384": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112461": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112471": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112573": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112579": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112641": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112681": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112740": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112757": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112817": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112818": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0112864": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0113277": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0113627": {
+    "strict": true
+  },
+  "tt0113670": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0113677": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0113862": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0113870": {
+    "strict": true
+  },
+  "tt0114117": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0114369": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0114388": {
+    "strict": true
+  },
+  "tt0114478": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "strict",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0114709": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0114746": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0114814": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0114906": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0115685": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0115736": {
+    "strict": true
+  },
+  "tt0116282": {
+    "strict": true
+  },
+  "tt0116477": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0116695": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0116905": {
+    "strict": true
+  },
+  "tt0116922": {
+    "strict": true
+  },
+  "tt0117060": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0117381": {
+    "strict": true
+  },
+  "tt0117500": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0117571": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0117665": {
+    "strict": true
+  },
+  "tt0117666": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0117731": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0117913": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0118111": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0118528": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0118607": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0118715": {
+    "strict": true
+  },
+  "tt0118749": {
+    "strict": true
+  },
+  "tt0118789": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0118884": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0118971": {
+    "strict": true
+  },
+  "tt0119008": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119094": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119174": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119177": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119217": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119229": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119282": {
+    "strict": true
+  },
+  "tt0119349": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119396": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119488": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119654": {
+    "strict": true
+  },
+  "tt0119683": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0119822": {
+    "strict": true
+  },
+  "tt0120201": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120324": {
+    "strict": true
+  },
+  "tt0120338": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120363": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120382": {
+    "strict": true
+  },
+  "tt0120586": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120601": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120655": {
+    "strict": true
+  },
+  "tt0120660": {
+    "strict": true
+  },
+  "tt0120669": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120684": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120689": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120737": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120755": {
+    "strict": true
+  },
+  "tt0120762": {
+    "strict": true
+  },
+  "tt0120768": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120789": {
+    "strict": true
+  },
+  "tt0120791": {
+    "strict": true
+  },
+  "tt0120794": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120804": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120815": {
+    "strict": true
+  },
+  "tt0120855": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120863": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120903": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0120915": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0121164": {
+    "strict": true
+  },
+  "tt0121765": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0121766": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0124315": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0125664": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0126029": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0128442": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0128445": {
+    "strict": true
+  },
+  "tt0129167": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0131409": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0132477": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0133093": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0133189": {
+    "strict": true
+  },
+  "tt0134119": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0137523": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "FHD",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0138704": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0139654": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0140352": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0144084": {
+    "strict": true
+  },
+  "tt0144117": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0145487": {
+    "strict": true
+  },
+  "tt0147612": {
+    "strict": true
+  },
+  "tt0147800": {
+    "strict": true
+  },
+  "tt0151804": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0158983": {
+    "strict": true
+  },
+  "tt0162222": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr10plus"
+      ]
+    },
+    "strict": true
+  },
+  "tt0165798": {
+    "strict": true
+  },
+  "tt0166792": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv"
+      ]
+    },
+    "strict": true
+  },
+  "tt0166896": {
+    "strict": true
+  },
+  "tt0166924": {
+    "strict": true
+  },
+  "tt0167260": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0167261": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "atmos",
+        "hdr"
+      ]
+    },
+    "strict": true
+  },
+  "tt0167404": {
+    "strict": true
+  },
+  "tt0169547": {
+    "source": "torrentio",
+    "verification": "declared",
+    "observedAt": "2026-11-28T13:04:24.098Z",
+    "via": "refresh",
+    "previous": {
+      "quality": "4K",
+      "formats": [
+        "dv",
+        "hdr"
+      ]
+    },
     "strict": true
   }
 }
