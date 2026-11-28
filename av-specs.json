@@ -553,9 +553,7 @@
   },
   "tt0086423": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0086425": {
     "quality": "4K",
@@ -568,7 +566,7 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr10plus"
+      "hdr"
     ]
   },
   "tt0086567": {
@@ -580,9 +578,7 @@
   },
   "tt0086637": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0086879": {
     "quality": "4K",
@@ -594,14 +590,13 @@
   "tt0086960": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr"
     ]
   },
   "tt0086969": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0086979": {
     "quality": "4K",
@@ -612,22 +607,15 @@
   },
   "tt0086993": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0087003": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0087291": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0087332": {
     "quality": "4K",
@@ -642,7 +630,6 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "atmos",
       "hdr"
     ]
   },
@@ -665,7 +652,6 @@
   "tt0087781": {
     "quality": "4K",
     "formats": [
-      "dv",
       "atmos",
       "hdr"
     ]
@@ -682,28 +668,24 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "atmos",
       "hdr"
     ]
   },
   "tt0088128": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0088184": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0088247": {
     "quality": "4K",
     "formats": [
       "dv",
       "atmos",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0088258": {
@@ -753,13 +735,13 @@
   "tt0088930": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr"
     ]
   },
   "tt0088939": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -773,10 +755,7 @@
   },
   "tt0089006": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr10plus"
-    ]
+    "formats": []
   },
   "tt0089175": {
     "quality": "4K",
@@ -795,14 +774,12 @@
   },
   "tt0089560": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0089603": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "hdr"
     ]
   },
   "tt0089755": {
@@ -830,9 +807,7 @@
   },
   "tt0089853": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0089885": {
     "quality": "4K",
@@ -859,7 +834,6 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "atmos",
       "hdr"
     ]
   },
@@ -881,15 +855,15 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "atmos"
+      "atmos",
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0090728": {
     "quality": "4K",
     "formats": [
-      "dv",
-      "hdr",
-      "hdr10plus"
+      "hdr"
     ]
   },
   "tt0090756": {
@@ -901,27 +875,19 @@
   },
   "tt0090830": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0090863": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0090888": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0090967": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0091042": {
     "quality": "4K",
@@ -933,48 +899,38 @@
   },
   "tt0091064": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0091149": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0091167": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0091209": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "atmos"
     ]
   },
   "tt0091217": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0091251": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "atmos"
-    ]
+    "formats": []
   },
   "tt0091369": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "atmos"
     ]
   },
   "tt0091419": {
@@ -986,16 +942,11 @@
   },
   "tt0091455": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0091474": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr10plus"
-    ]
+    "formats": []
   },
   "tt0091763": {
     "quality": "4K",
@@ -1039,7 +990,6 @@
   "tt0092106": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -1052,22 +1002,15 @@
   },
   "tt0092618": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0092695": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0092699": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0092890": {
     "quality": "4K",
@@ -1079,10 +1022,7 @@
   },
   "tt0092965": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0092991": {
     "quality": "4K",
@@ -1100,15 +1040,11 @@
   },
   "tt0093105": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0093223": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0093409": {
     "quality": "4K",
@@ -1127,16 +1063,11 @@
   },
   "tt0093509": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0093565": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0093640": {
     "quality": "4K",
@@ -1149,14 +1080,16 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr10plus"
+      "hdr10plus",
+      "hdr"
     ]
   },
   "tt0093773": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0093779": {
@@ -1169,14 +1102,11 @@
   },
   "tt0093818": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0093822": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -1197,15 +1127,11 @@
   },
   "tt0094027": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0094138": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0094226": {
     "quality": "4K",
@@ -1218,22 +1144,16 @@
   "tt0094291": {
     "quality": "4K",
     "formats": [
-      "dv",
-      "hdr",
-      "hdr10plus"
+      "hdr"
     ]
   },
   "tt0094608": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0094663": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0094721": {
     "quality": "4K",
@@ -1246,29 +1166,23 @@
   "tt0094737": {
     "quality": "4K",
     "formats": [
-      "dv",
-      "hdr",
-      "hdr10plus"
+      "hdr"
     ]
   },
   "tt0094747": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0094898": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr10plus"
+      "hdr"
     ]
   },
   "tt0094947": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0095016": {
     "quality": "4K",
@@ -1280,46 +1194,31 @@
   },
   "tt0095031": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0095082": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0095159": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0095243": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0095489": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0095497": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0095631": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -1333,20 +1232,20 @@
   "tt0095705": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr"
     ]
   },
   "tt0095953": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr"
     ]
   },
   "tt0096018": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0096256": {
     "quality": "4K",
@@ -1358,16 +1257,11 @@
   },
   "tt0096283": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr10plus"
-    ]
+    "formats": []
   },
   "tt0096332": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0096438": {
     "quality": "4K",
@@ -1381,8 +1275,7 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr",
-      "atmos"
+      "hdr"
     ]
   },
   "tt0096754": {
@@ -1390,7 +1283,8 @@
     "formats": [
       "dv",
       "atmos",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0096874": {
@@ -1398,7 +1292,8 @@
     "formats": [
       "dv",
       "atmos",
-      "hdr10plus"
+      "hdr10plus",
+      "hdr"
     ]
   },
   "tt0096895": {
@@ -1413,54 +1308,43 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "atmos"
     ]
   },
   "tt0097027": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0097123": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0097165": {
     "quality": "4K",
     "formats": [
       "dv",
       "atmos",
-      "hdr",
-      "hdr10plus"
+      "hdr"
     ]
   },
   "tt0097216": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
   "tt0097239": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0097240": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0097351": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -1483,25 +1367,21 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "atmos"
+      "atmos",
+      "hdr"
     ]
   },
   "tt0097674": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0097722": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0097733": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -1517,7 +1397,8 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0097958": {
@@ -1537,18 +1418,11 @@
   },
   "tt0098258": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0098384": {
     "quality": "4K",
-    "formats": [
-      "dv",
-      "atmos",
-      "hdr"
-    ]
+    "formats": []
   },
   "tt0098554": {
     "quality": "4K",
@@ -1567,7 +1441,6 @@
   "tt0098724": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -1575,7 +1448,9 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr10plus"
+      "hdr10plus",
+      "hdr",
+      "atmos"
     ]
   },
   "tt0099088": {
@@ -1583,21 +1458,25 @@
     "formats": [
       "dv",
       "atmos",
-      "hdr10plus"
+      "hdr10plus",
+      "hdr"
     ]
   },
   "tt0099348": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0099487": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus",
+      "atmos"
     ]
   },
   "tt0099674": {
@@ -1611,21 +1490,25 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0099785": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus",
+      "atmos"
     ]
   },
   "tt0099810": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0099871": {
@@ -1638,7 +1521,7 @@
   "tt0100150": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "hdr"
     ]
   },
   "tt0100157": {
@@ -1653,13 +1536,13 @@
     "formats": [
       "dv",
       "atmos",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0101410": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -1683,38 +1566,40 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr10plus"
+      "hdr10plus",
+      "hdr"
     ]
   },
   "tt0101748": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0101889": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr10plus"
+      "hdr10plus",
+      "hdr"
     ]
   },
   "tt0101921": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr10plus"
     ]
   },
   "tt0102138": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0102536": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
@@ -1722,13 +1607,16 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0102926": {
     "quality": "4K",
     "formats": [
-      "dv"
+      "dv",
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0102975": {
@@ -1736,28 +1624,29 @@
     "formats": [
       "dv",
       "hdr",
-      "atmos"
+      "atmos",
+      "hdr10plus"
     ]
   },
   "tt0103064": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0103074": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0103130": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0103639": {
     "quality": "4K",
@@ -1780,7 +1669,8 @@
     "formats": [
       "dv",
       "atmos",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0104257": {
@@ -1788,21 +1678,19 @@
     "formats": [
       "dv",
       "atmos",
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt0104348": {
     "quality": "4K",
     "formats": [
-      "dv",
       "hdr"
     ]
   },
   "tt0104466": {
     "quality": "4K",
-    "formats": [
-      "dv"
-    ]
+    "formats": []
   },
   "tt0104691": {
     "quality": "4K",
@@ -10422,13 +10310,17 @@
     "formats": [
       "dv",
       "hdr10plus",
-      "atmos"
+      "atmos",
+      "hdr"
     ]
   },
   "tt37522541": {
     "quality": "4K",
     "formats": [
-      "hdr"
+      "hdr",
+      "dv",
+      "hdr10plus",
+      "atmos"
     ]
   },
   "tt6611324": {
@@ -10450,7 +10342,8 @@
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "atmos"
     ]
   },
   "tt50389959": {
@@ -10476,20 +10369,24 @@
     "quality": "4K",
     "formats": [
       "hdr",
-      "atmos"
+      "atmos",
+      "dv"
     ]
   },
   "tt29256561": {
     "quality": "4K",
     "formats": [
-      "hdr"
+      "hdr",
+      "hdr10plus"
     ]
   },
   "tt37510326": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr10plus"
+      "hdr10plus",
+      "hdr",
+      "atmos"
     ]
   },
   "tt29611136": {
@@ -10498,34 +10395,41 @@
   },
   "tt38258118": {
     "quality": "4K",
-    "formats": []
+    "formats": [
+      "hdr"
+    ]
   },
   "tt32261958": {
     "quality": "4K",
     "formats": [
       "dv",
       "hdr",
-      "atmos"
+      "atmos",
+      "hdr10plus"
     ]
   },
   "tt39316936": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr10plus"
+      "hdr10plus",
+      "hdr"
     ]
   },
   "tt37180686": {
     "quality": "4K",
     "formats": [
-      "hdr"
+      "hdr",
+      "hdr10plus",
+      "atmos"
     ]
   },
   "tt36413910": {
     "quality": "4K",
     "formats": [
       "dv",
-      "hdr"
+      "hdr",
+      "atmos"
     ]
   },
   "tt24818230": {
@@ -10533,7 +10437,8 @@
     "formats": [
       "dv",
       "hdr10plus",
-      "atmos"
+      "atmos",
+      "hdr"
     ]
   },
   "tt32213169": {
@@ -10541,19 +10446,93 @@
     "formats": [
       "dv",
       "hdr",
-      "atmos"
+      "atmos",
+      "hdr10plus"
     ]
   },
   "tt27419420": {
     "quality": "4K",
     "formats": [
-      "hdr"
+      "hdr",
+      "dv",
+      "hdr10plus",
+      "atmos"
     ]
   },
   "tt38213251": {
     "quality": "4K",
     "formats": [
       "dv",
+      "hdr",
+      "atmos"
+    ]
+  },
+  "tt14413964": {
+    "quality": "4K",
+    "formats": [
+      "hdr"
+    ]
+  },
+  "tt37267166": {
+    "quality": "4K",
+    "formats": [
+      "dv",
+      "hdr"
+    ]
+  },
+  "tt28498219": {
+    "quality": "4K",
+    "formats": [
+      "dv",
+      "hdr",
+      "hdr10plus"
+    ]
+  },
+  "tt38515310": {
+    "quality": "4K",
+    "formats": [
+      "hdr"
+    ]
+  },
+  "tt38793125": {
+    "quality": "4K",
+    "formats": [
+      "dv",
+      "hdr"
+    ]
+  },
+  "tt33318732": {
+    "quality": "4K",
+    "formats": [
+      "hdr"
+    ]
+  },
+  "tt32268691": {
+    "quality": "4K",
+    "formats": [
+      "dv",
+      "hdr",
+      "atmos"
+    ]
+  },
+  "tt27050858": {
+    "quality": "4K",
+    "formats": []
+  },
+  "tt39631280": {
+    "quality": "4K",
+    "formats": [
+      "dv",
+      "hdr"
+    ]
+  },
+  "tt50016818": {
+    "quality": "4K",
+    "formats": []
+  },
+  "tt14129116": {
+    "quality": "4K",
+    "formats": [
       "hdr"
     ]
   }
